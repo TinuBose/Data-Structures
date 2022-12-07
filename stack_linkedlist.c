@@ -13,7 +13,7 @@ void display();
 void main() {
   int choice;
   do {
-    printf("\nsingly linkedlist operations\n");
+    printf("\n######stack operations######\n");
     printf("\nselect an option\n");
     printf("\n1.push\n2.pop\n3.display\n4.exit");
     scanf("%d", & choice);
