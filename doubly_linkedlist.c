@@ -17,7 +17,7 @@ void display();
 void main() {
   int choice;
   do {
-    printf("\nsingly linkedlist operations\n");
+    printf("\ndoubly linkedlist operations\n");
     printf("\nselect an option\n");
     printf("\n1.insert @ beginning\n2.insert @ end\n3.random insert\n4.delete @ beginning\n5.delete @ end\n6.random delete\n7.display\n8.exit");
     scanf("%d", & choice);
