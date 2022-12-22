@@ -8,7 +8,7 @@ void dequeue();
 void display();
 
 void main() {
-  printf("#####queue operations#####");
+  printf("#####circular queue operations#####");
   printf("\nenter size of the queue\n");
   scanf("%d", & n);
   do {
