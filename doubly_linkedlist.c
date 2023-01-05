@@ -44,7 +44,7 @@ void main() {
       display();
       break;
     case 8:
-      printf("\nexit\n");
+      printf("\nexiting...\n");
       break;
     default:
       printf("\nenter a valid option\n");
