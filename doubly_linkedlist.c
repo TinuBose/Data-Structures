@@ -70,7 +70,7 @@ void beginsert() {
       head = newnode;
     }
   }
-  printf("\nnode inserted data=%d\n", newnode -> data);
+  printf("\nnode inserted data = %d\n", newnode -> data);
 }
 
 void lastinsert() {
@@ -94,7 +94,7 @@ void lastinsert() {
       newnode -> next = 0;
     }
   }
-  printf("\nnode inserted data=%d\n", newnode -> data);
+  printf("\nnode inserted data = %d\n", newnode -> data);
 }
 void randominsert() {
   int i = 1, position = 0;
@@ -125,7 +125,7 @@ void randominsert() {
 
     }
   }
-  printf("\nnode inserted at loacation %d , data= %d\n", position, newnode -> data);
+  printf("\nnode inserted at loacation %d , data = %d\n", position, newnode -> data);
 }
 void begindelete() {
   if (head == 0) {
