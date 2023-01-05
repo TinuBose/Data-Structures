@@ -17,7 +17,7 @@ void display();
 void main() {
   int choice;
   do {
-    printf("\ndoubly linkedlist operations\n");
+    printf("\n###singly linkedlist operations###\n");
     printf("\nselect an option\n");
     printf("\n1.insert @ beginning\n2.insert @ end\n3.random insert\n4.delete @ beginning\n5.delete @ end\n6.random delete\n7.display\n8.exit");
     scanf("%d", & choice);
@@ -125,19 +125,24 @@ void randominsert() {
 
     }
   }
-  printf("\nnode inserted at loacation %d,data=%d\n", position, newnode -> data);
+  printf("\nnode inserted at loacation %d , data= %d\n", position, newnode -> data);
 }
 void begindelete() {
   if (head == 0) {
     printf("\n list is empty\n");
   } else {
-    temp = head;
+    if (head -> next == 0) {
+      printf("\ndeleted %d\n", head -> data);
+      head = 0;
+    } else {
+      temp = head;
 
-    temp -> next -> prev = 0;
-    head = temp -> next;
+      temp -> next -> prev = 0;
+      head = temp -> next;
 
-    printf("\ndeleted %d\n", temp -> data);
-    free(temp);
+      printf("\ndeleted %d\n", temp -> data);
+      free(temp);
+    }
 
   }
 }
@@ -145,15 +150,19 @@ void lastdelete() {
   if (head == 0) {
     printf("\n list is empty\n");
   } else {
-    temp = head;
-    while (temp -> next != 0) {
+    if (head -> next == 0) {
+      printf("\ndeleted %d\n", head -> data);
+      head = 0;
+    } else {
+      temp = head;
+      while (temp -> next != 0) {
 
-      temp = temp -> next;
+        temp = temp -> next;
+      }
+
+      temp -> prev -> next = 0;
+      printf("\ndeleted %d\n", temp -> data);
     }
-
-    temp -> prev -> next = 0;
-    printf("\ndeleted %d\n", temp -> data);
-    free(temp);
 
   }
 }
@@ -195,6 +204,7 @@ void display() {
   if (head == 0) {
     printf("\nempty\n");
   } else {
+    printf("\ncurrent list = ");
     temp = head;
     while (temp != 0) {
       printf("%d\t", temp -> data);
