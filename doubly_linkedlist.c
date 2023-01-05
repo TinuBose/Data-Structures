@@ -174,7 +174,9 @@ void randomdelete() {
     printf("\n list is empty\n");
   } else {
     temp = head;
-    if (position == 1) {
+    if (temp -> next == 0) {
+      head = 0;
+    } else if (position == 1) {
       head = temp;
       temp -> next -> prev = 0;
 
